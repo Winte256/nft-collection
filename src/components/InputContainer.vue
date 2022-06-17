@@ -19,7 +19,7 @@
     </div>
     <div class="inputInfo">
       Нажимая на кнопку, вы даете согласие на обработку персональных <br> данных и соглашаетесь с
-      <a href="https://oton.org/media/PRIVACY_NOTICE.pdf?b6f7ac2c" target="_blank">
+      <a href="https://oton.technology/OtonTechnology_PrivacyPolicy.pdf" target="_blank">
         политикой конфиденциальности
       </a>
     </div>
