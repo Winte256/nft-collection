@@ -30,10 +30,11 @@ export default defineComponent({
   backdrop-filter: blur(10px);
   border-radius: 2px;
   position: fixed;
-  bottom: 0;
+  bottom: -1000px;
   left: 50%;
   margin-left: -160px;
   padding: 20px;
+  transition: .7s;
   @media screen and (min-width: 445px) {
     width: 310px;
     margin-left: -175px;
@@ -90,6 +91,7 @@ export default defineComponent({
   font-size: 16px;
   color: #0A3ADC;
   border-bottom: #0A3ADC 1px solid;
+  transition: all .5s;
   &:hover {
     background: linear-gradient(180.1deg, #0A3ADC 0.09%, #00CBFF 99.91%);
     -webkit-background-clip: text;

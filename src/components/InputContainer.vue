@@ -75,6 +75,7 @@ export default defineComponent({
 .iconBox {
   position: relative;
   top: 6px;
+  transition: 0.5s;
   &:hover {
     cursor: pointer;
   }
@@ -94,11 +95,13 @@ export default defineComponent({
   position: absolute;
   top: 0;
   left: 0;
+  transition: 0.5s;
 }
 .searchPress {
   top: 20px;
   left: 15px;
 }
 .search {
+  transition: 0.5s;
 }
 </style>

@@ -12,9 +12,9 @@
     </div>
     <InputContainer @click="formData.isOpenYourNft = !formData.isOpenYourNft" />
     <FooterContainer />
-    <cookiePolicyContainer v-if="false" />
-    <ModalNotFound v-if="formData.isOpenYourNft" />
-    <ModalYourNft v-if="false" />
+    <cookiePolicyContainer :class="{isOpenCookiePolicy: false}" />
+    <ModalNotFound :class="{isOpenModalNotFound: formData.isOpenYourNft}" />
+    <ModalYourNft :class="{isOpenYourNft: false}" />
     <div
       :class="{yourNftBg: formData.isOpenYourNft}"
       @click="formData.isOpenYourNft = false"
@@ -91,5 +91,11 @@ export default defineComponent({
   opacity: .6;
   background: #425df3;
   z-index: 1;
+}
+.isOpenModalNotFound,
+.isOpenYourNft,
+.isOpenCookiePolicy {
+  opacity: 1;
+  transform: translateY(-1000px);
 }
 </style>

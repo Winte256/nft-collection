@@ -31,10 +31,12 @@ export default defineComponent({
   border-radius: 2px;
   padding: 20px 20px 40px 20px;
   position: fixed;
-  top: 50%;
+  top: calc(50% + 1000px);
   margin-top: -194px;
   left: 50%;
   margin-left: -175px;
+  transition: .5s;
+  opacity: 0;
   z-index: 2;
   &__title {
     font-family: 'Lab Grotesque', Arial, sans-serif;
