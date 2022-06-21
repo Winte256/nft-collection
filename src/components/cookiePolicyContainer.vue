@@ -52,20 +52,24 @@ export default defineComponent({
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   @media screen and (min-width: 445px) {
     width: 140px;
+    font-size: 14px;
   }
 }
 .acceptBtn {
   background: radial-gradient(511.96% 511.96% at 46.34% -242.39%, #0A3ADC 42.19%, #00CBFF 100%);
   color: #fff;
-  font-size: 14px;
+  font-size: 12px;
   &:hover {
     background: radial-gradient(511.96% 511.96% at 46.34% -242.39%, #0A3ADC 0%, #00CBFF 100%);
   }
   &:active {
     background: radial-gradient(311.6% 311.71% at 46.34% -242.39%, #0A3ADC 0%, #00CBFF 100%);
+  }
+  @media screen and (min-width: 445px) {
+    font-size: 14px;
   }
 }
 .buttonsBox {
@@ -73,7 +77,7 @@ export default defineComponent({
 }
 .cookiePolicyLink {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   color: #0A3ADC;
   border-bottom: #0A3ADC 1px solid;
   transition: all .5s;
@@ -92,6 +96,9 @@ export default defineComponent({
     background-clip: text;
     text-fill-color: transparent;
     border-bottom: #00FFFF 1px solid;
+  }
+  @media screen and (min-width: 445px) {
+    font-size: 16px;
   }
 }
 .isConfirmCookie {

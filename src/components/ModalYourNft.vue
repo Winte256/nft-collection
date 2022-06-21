@@ -5,7 +5,7 @@
       <img
         class="yourNftContainer__img"
         :src="
-          require(`@/assets/nft/nft-chain10k_${(elem && elem.id)
+          require(`@/assets/nft/nft-chain10k_${(elem && (elem.id < 10 ? '0' + elem.id : elem.id))
           || '01'}.jpg`)
         "
         alt="123"
@@ -93,9 +93,12 @@ export default defineComponent({
   align-items: center;
   &__title {
     font-family: 'Lab Grotesque', Arial, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 24px;
     margin: 20px 0 10px; 0;
+    @media screen and (min-width: 445px) {
+      font-size: 20px;
+    }
   }
   &__imgBox {
     filter: drop-shadow(0px 4px 25px rgba(10, 58, 220, 0.5));
@@ -113,14 +116,20 @@ export default defineComponent({
   margin-top: -140px;
   padding-left: 15px;
   &__title {
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
     margin: 0 0 50px 0;
+    @media screen and (min-width: 445px) {
+      font-size: 20px;
+    }
   }
   &__info {
     text-align: left;
-    font-size: 13px;
+    font-size: 11px;
     line-height: 18px;
+    @media screen and (min-width: 445px) {
+      font-size: 13px;
+    }
   }
   &__list {
     display: flex;

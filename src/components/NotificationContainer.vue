@@ -107,7 +107,7 @@ export default defineComponent({
 
 <style lang="stylus" scoped>
 .notificationContainer {
-  width: 300px;
+  width: 95vw;
   height: 983px;
   position: relative;
   padding-top: 20px;
@@ -122,8 +122,11 @@ export default defineComponent({
 .mainBox {
   &__title {
     font-family: 'Lab Grotesque', Arial, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 24px;
+    @media screen and (min-width: 445px) {
+      font-size: 20px;
+    }
   }
 
   &__ellipse {

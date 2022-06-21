@@ -13,9 +13,9 @@
         name="walletNum"
       >
       <div class="iconBox" @click="click" @keyDown="click">
-        <img class="icon search" src="@/assets/search-icon.svg" alt="search">
-        <img class="icon searchHover" src="@/assets/search-hover-icon.svg" alt="search if hover">
-        <img class="icon searchPress" src="@/assets/search-press-icon.svg" alt="search if press">
+        <img class="icon search" src="@/assets/search-icon.png" alt="search">
+        <img class="icon searchHover" src="@/assets/search-hover-icon.png" alt="search if hover">
+        <img class="icon searchPress" src="@/assets/search-press-icon.png" alt="search if press" />
       </div>
     </div>
     <div class="inputInfo">
@@ -62,9 +62,12 @@ export default defineComponent({
   top: -10px;
 }
 .labelForWalletNum {
-  font-size: 15px;
+  font-size: 13px;
   padding: 0;
   margin: 23px 0 0 0;
+  @media screen and (min-width: 445px) {
+    font-size: 15px;
+  }
 }
 .walletNumInput {
   width: 233px;
@@ -72,8 +75,12 @@ export default defineComponent({
   padding: 0 10px;
   border: #0A3ADC 1px solid;
   border-radius: 2px;
+  font-size: 14px;
   &::-webkit-input-placeholder {
     color: rgba(0, 0, 0, 0.5);
+  }
+  @media screen and (min-width: 445px) {
+    font-size: 16px;
   }
 }
 .inputInfo {

@@ -1,7 +1,7 @@
 <template>
   <div class="notFoundContainer">
     <h1 class="notFoundContainer__title">NFT не найден </h1>
-    <img src="@/assets/notFound-i.svg" alt="notFound">
+    <img src="@/assets/notFound-i.png" alt="notFound">
     <p class="notFoundContainer__firstText">Что-то пошло не так.</p>
     <p class="notFoundContainer__secondText">
       Попробуйте перезагрузить страницу и снова проверить наличие NFT  в вашем кошельке.
@@ -40,7 +40,7 @@ export default defineComponent({
   z-index: 2;
   &__title {
     font-family: 'Lab Grotesque', Arial, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 24px;
     margin: 20px 0 0 0;
   }
@@ -48,11 +48,22 @@ export default defineComponent({
     margin: 0;
     position: relative;
     top: -15px;
-    font-size: 15px;
+    font-size: 13px;
   }
   &__secondText {
     margin: 10px 0 0 0;
-    font-size: 15px;
+    font-size: 13px;
+  }
+  @media screen and (min-width: 445px) {
+    &__title {
+      font-size: 20px;
+    }
+    &__firstText {
+      font-size: 15px;
+    }
+    &__secondText {
+      font-size: 15px;
+    }
   }
 }
 .support {

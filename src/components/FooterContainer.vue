@@ -59,9 +59,10 @@ export default defineComponent({
   top: -150px;
   color: #fff;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 14px;
   @media screen and (min-width: 445px) {
     top: -200px;
+    font-size: 16px;
   }
 }
 .link {
