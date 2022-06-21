@@ -6,8 +6,7 @@
       </a>
     </div>
     <div class="buttonsBox">
-      <button class="button acceptBtn">Принять все</button>
-      <button class="button cookieSettings">Настройки cookie</button>
+      <button class="button acceptBtn" @click="click">Принять</button>
     </div>
   </div>
 </template>
@@ -18,6 +17,12 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'cookiePolicyContainer',
   components: {
+  },
+  emits: ['click'],
+  methods: {
+    click(e) {
+      this.$emit('click', e);
+    },
   },
 });
 </script>
@@ -56,31 +61,11 @@ export default defineComponent({
   background: radial-gradient(511.96% 511.96% at 46.34% -242.39%, #0A3ADC 42.19%, #00CBFF 100%);
   color: #fff;
   font-size: 14px;
-  margin-right: 5px;
   &:hover {
     background: radial-gradient(511.96% 511.96% at 46.34% -242.39%, #0A3ADC 0%, #00CBFF 100%);
   }
   &:active {
     background: radial-gradient(311.6% 311.71% at 46.34% -242.39%, #0A3ADC 0%, #00CBFF 100%);
-  }
-  @media screen and (min-width: 445px) {
-    margin-right: 30px;
-  }
-}
-.cookieSettings {
-  border: #0A3ADC 1px solid;
-  filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.25));
-  background: transparent;
-  color: #0A3ADC;
-  &:hover {
-    background: radial-gradient(511.96% 511.96% at 46.34% -242.39%, #0A3ADC 0%, #00CBFF 100%);
-    color: #fff;
-    border: none;
-  }
-  &:active {
-    background: radial-gradient(311.6% 311.71% at 46.34% -242.39%, #0A3ADC 0%, #00CBFF 100%);
-    color: #fff;
-    border: none;
   }
 }
 .buttonsBox {
@@ -108,5 +93,9 @@ export default defineComponent({
     text-fill-color: transparent;
     border-bottom: #00FFFF 1px solid;
   }
+}
+.isConfirmCookie {
+  opacity: 0;
+  transition: translateY(0);
 }
 </style>

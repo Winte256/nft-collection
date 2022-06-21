@@ -5,6 +5,7 @@
     </p>
     <div class="inputBox">
       <input
+        v-model="inputValue"
         id="walletNum"
         class="walletNumInput"
         type="text"
@@ -32,10 +33,20 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'InputContainer',
   components: { },
-  emits: ['click'],
+  data() {
+    return {
+      inputValue: '',
+    };
+  },
+  emits: ['click', 'onChange'],
   methods: {
     click(e) {
       this.$emit('click', e);
+    },
+  },
+  watch: {
+    inputValue(value) {
+      this.$emit('setValue', value);
     },
   },
 });

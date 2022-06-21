@@ -101,7 +101,7 @@ export default defineComponent({
   height: 1px;
   background: #00CBFF;
   margin: 0 auto;
-  @media screen and (min-width: 445px) {
+  @media screen and (min-width: 428px) {
     width: 310px;
   }
 }
