@@ -5,8 +5,9 @@
       <img
         class="yourNftContainer__img"
         :src="
-          require(`@/assets/nft/nft-chain10k_${(elem && (elem.id < 10 ? '0' + elem.id : elem.id))
-          || '01'}.jpg`)
+          require(`@/assets/nft/nft-chain10k_${
+            (elem && (+elem.id < 10 ? '0' + String(elem.id) : elem.id))|| '01'
+          }.jpg`)
         "
         alt="123"
       />

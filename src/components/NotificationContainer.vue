@@ -24,7 +24,7 @@
       @click="confirmCookiePolicy"
     />
     <ModalNotFound :class="{ isOpenModalNotFound: formData.isOpenModal && !isAddressNft }" />
-    <ModalYourNft :class="{ isOpenYourNft: isAddressNft && formData.isOpenModal }" />
+    <ModalYourNft :class="{ isOpenYourNft: isAddressNft && fetchState === 'FULFILLED' }" />
     <div
       :class="{ yourNftBg: formData.isOpenModal }"
       @click="closeModal"
@@ -58,11 +58,11 @@ export default defineComponent({
   setup() {
     const store = useStore();
     const formData = reactive({
-      isOpenYourNft: false,
-      info: null,
       address: '',
       isOpenModal: false,
     });
+
+    const fetchState = computed(() => store.state.addressBalance.fetchState);
 
     const addressNft = computed(() => store.getters['addressBalance/data']);
     const filteredArray = computed(() => addressNft.value.filter((element) => element.address === '0x6C75b803965a58D707B0696330fb37dD136a27E1'));
@@ -100,6 +100,7 @@ export default defineComponent({
       filteredArray,
       isAddressNft,
       closeModal,
+      fetchState,
     };
   },
 });
@@ -143,7 +144,6 @@ export default defineComponent({
   width: 100px;
   height: 40px;
 }
-
 .yourNftBg {
   position: fixed;
   top: 0;
@@ -153,7 +153,6 @@ export default defineComponent({
   opacity: 0.6;
   background: #425df3;
   z-index: 1;
-  transition: .3s;
 }
 
 .isOpenModalNotFound, .isOpenYourNft, .isOpenCookiePolicy {
