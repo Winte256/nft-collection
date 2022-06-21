@@ -24,7 +24,7 @@
       @click="confirmCookiePolicy"
     />
     <ModalNotFound :class="{ isOpenModalNotFound: formData.isOpenModal && !isAddressNft }" />
-    <ModalYourNft :class="{ isOpenYourNft: isAddressNft }" />
+    <ModalYourNft :class="{ isOpenYourNft: isAddressNft && formData.isOpenModal }" />
     <div
       :class="{ yourNftBg: formData.isOpenModal }"
       @click="closeModal"
@@ -87,7 +87,7 @@ export default defineComponent({
 
     const openAddressNft = () => {
       store.dispatch('addressBalance/fetch', formData.address);
-      setTimeout(() => { formData.isOpenModal = true; }, 400);
+      setTimeout(() => { formData.isOpenModal = true; }, 200);
     };
 
     return {
@@ -150,10 +150,12 @@ export default defineComponent({
   opacity: 0.6;
   background: #425df3;
   z-index: 1;
+  transition: .3s;
 }
 
 .isOpenModalNotFound, .isOpenYourNft, .isOpenCookiePolicy {
   opacity: 1;
   transform: translateY(-1000px);
+  transition: .3s;
 }
 </style>
