@@ -44,6 +44,7 @@ export default defineComponent({
   position: relative;
   top: 100px;
   &__ellipse {
+    pointer-events: none;
     position: relative;
     top: -80px;
     width: 100%;

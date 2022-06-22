@@ -140,6 +140,7 @@ export default defineComponent({
   margin-left: 5px;
 }
 .ellipse {
+  pointer-events: none;
   position: relative;
   top: -60px;
   z-index: -1;

@@ -55,7 +55,6 @@ export const actions = {
       ctx.commit('SET_STATE', FULFILLED);
     } catch (err) {
       ctx.commit('SET_STATE', REJECTED);
-      console.error(err);
     }
   },
 };
