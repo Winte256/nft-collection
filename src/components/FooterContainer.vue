@@ -41,8 +41,9 @@ export default defineComponent({
 <style lang="stylus" scoped>
 .footer {
   background: #0A3ADC;
-  position: relative;
-  top: 100px;
+  position: absolute;
+  max-height: 236px;
+  bottom: 0;
   &__ellipse {
     pointer-events: none;
     position: relative;

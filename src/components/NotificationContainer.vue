@@ -106,6 +106,7 @@ export default defineComponent({
 <style lang="stylus" scoped>
 .notificationContainer {
   width: 95vw;
+  min-height: 100vh;
   height: 983px;
   position: relative;
   padding-top: 20px;
