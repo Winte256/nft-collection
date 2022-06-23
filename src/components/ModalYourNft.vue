@@ -52,7 +52,7 @@ export default defineComponent({
       'Убедитесь, что вы находитесь в кошельке с тем адресом, на который получали NFT.',
       'Перейдите на вкладку «Невзаимозаменяемые токены».',
       'Прокрутите экран вниз и нажмите «ДОБАВИТЬ невзаимозаменяемые токены».',
-      'Укажите адрес.',
+      'Укажите адрес: <b>0x6C75b803965a58D707B0696330fb37dD136a27E1</b>',
       `Укажите Идентификатор: <b>${filteredArray.value[0] && filteredArray.value[0].id}</b>`,
       'Нажмите «Добавить».',
       'Дождитесь загрузки изображения.',
@@ -73,6 +73,7 @@ export default defineComponent({
   width: 310px;
   height: 526px;
   overflow: scroll;
+  overflow-x: hidden;
   scrollbar-width: none;
   &::-webkit-scrollbar {
     display: none;
