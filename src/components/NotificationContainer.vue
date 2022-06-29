@@ -19,8 +19,7 @@
     />
     <FooterContainer />
     <cookiePolicyContainer
-      class="isOpenCookiePolicy"
-      v-if="!isCookieAccepted"
+      :class="{isOpenCookiePolicy: !isCookieAccepted}"
       @click="confirmCookiePolicy"
     />
     <ModalNotFound :class="{ isOpenModalNotFound: fetchState === 'FULFILLED' && !isAddressNft }" />
